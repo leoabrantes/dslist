@@ -1,6 +1,7 @@
 package com.abrantes.dslist.dto;
 
 import com.abrantes.dslist.entities.Game;
+import com.abrantes.dslist.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -19,6 +20,14 @@ public class GameMinDTO {
 		this.year = entity.getYear();
 		this.imgUrl = entity.getImgUrl();
 		this.shortDescription = entity.getShortDescription();
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescription();
 	}
 
 	public Long getId() {
