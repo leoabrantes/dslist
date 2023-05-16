@@ -7,7 +7,7 @@ public class GameMinDTO {
 	
 	private Long id;
 	private String title;
-	private Integer year;
+	private Integer gameYear;
 	private String imgUrl;
 	private String shortDescription;
 	
@@ -17,7 +17,7 @@ public class GameMinDTO {
 	public GameMinDTO(Game entity) {
 		this.id = entity.getId();
 		this.title = entity.getTitle();
-		this.year = entity.getYear();
+		this.gameYear = entity.getYear();
 		this.imgUrl = entity.getImgUrl();
 		this.shortDescription = entity.getShortDescription();
 	}
@@ -25,7 +25,7 @@ public class GameMinDTO {
 	public GameMinDTO(GameMinProjection projection) {
 		id = projection.getId();
 		title = projection.getTitle();
-		year = projection.getYear();
+		gameYear = projection.getGameYear();
 		imgUrl = projection.getImgUrl();
 		shortDescription = projection.getShortDescription();
 	}
@@ -47,11 +47,11 @@ public class GameMinDTO {
 	}
 
 	public Integer getYear() {
-		return year;
+		return gameYear;
 	}
 
 	public void setYear(Integer year) {
-		this.year = year;
+		this.gameYear = year;
 	}
 
 	public String getImgUrl() {
